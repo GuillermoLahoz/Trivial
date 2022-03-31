@@ -111,5 +111,19 @@ public class TrivialTests {
       sut.tirarDado(1);
       sut.respuestaIncorrecta();
     }
+
+    @Test
+    public void las_preguntas_vuelven_al_mazo() throws  Exception{
+      Game sut = new Game("Maria", "Juan");
+
+      String expected = (String) sut.getPreguntasCiencias().getFirst();
+
+      sut.tirarDado(1);
+      sut.respuestaCorrecta();
+
+      String actual = (String) sut.getPreguntasCiencias().getLast();
+
+      Assertions.assertEquals(expected, actual);
+    }
 }
 

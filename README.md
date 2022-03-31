@@ -22,3 +22,6 @@ corregido duplicacion de codigo
 ## problema 6
 corregido duplicacion de codigo en respuertaCorrecta
 
+## problema 7 
+
+creado mazo para que pase las preguntas al fina de esta

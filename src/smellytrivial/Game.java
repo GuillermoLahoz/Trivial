@@ -125,14 +125,26 @@ public class Game {
     }
 
     private void hacerPregunta() {
-        if (categoriaActual() == "Cultura popular")
-            System.out.println(preguntasCultura.removeFirst());
-        if (categoriaActual() == "Ciencias")
-            System.out.println(preguntasCiencias.removeFirst());
-        if (categoriaActual() == "Deportes")
-            System.out.println(preguntasDeportes.removeFirst());
-        if (categoriaActual() == "Música")
-            System.out.println(preguntasMusica.removeFirst());
+        if (categoriaActual() == "Cultura popular") {
+            Object pregunta = preguntasCultura.removeFirst();
+            System.out.println(pregunta);
+            preguntasCultura.addLast(pregunta);
+        }
+        if (categoriaActual() == "Ciencias") {
+            Object pregunta = preguntasCiencias.removeFirst();
+            System.out.println(pregunta);
+            preguntasCiencias.addLast(pregunta);
+        }
+        if (categoriaActual() == "Deportes") {
+            Object pregunta = preguntasDeportes.removeFirst();
+            System.out.println(pregunta);
+            preguntasDeportes.addLast(pregunta);
+        }
+        if (categoriaActual() == "Musica") {
+            Object pregunta = preguntasMusica.removeFirst();
+            System.out.println(pregunta);
+            preguntasMusica.addLast(pregunta);
+        }
     }
 
 
@@ -199,5 +211,9 @@ public class Game {
     public boolean estaEnCarcel(String nombreJugador) {
         int indiceJugador = jugadores.indexOf(nombreJugador);
         return enCasillaCastigo[indiceJugador];
+    }
+
+    public LinkedList getPreguntasCiencias() {
+        return preguntasCiencias;
     }
 }
