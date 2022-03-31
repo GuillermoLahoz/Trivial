@@ -91,6 +91,7 @@ public class Game {
         if (enCasillaCastigo[jugadorActual]) {
             if (puntosDado % 2 != 0) {
                 estaSaliendoDeLaCarcel = true;
+                enCasillaCastigo[jugadorActual] = false;
 
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
@@ -201,5 +202,10 @@ public class Game {
 
     private boolean jugadorHaGanado() {
         return !(monederos[jugadorActual] == 6);
+    }
+
+    public boolean estaEnCarcel(String nombreJugador) {
+        int indiceJugador = jugadores.indexOf(nombreJugador);
+        return enCasillaCastigo[indiceJugador];
     }
 }
