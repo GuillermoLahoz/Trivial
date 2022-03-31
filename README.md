@@ -18,3 +18,7 @@ invertidos las funciones para solucionar el error de que el ganador era realment
 
 ## problema 5
 corregido duplicacion de codigo
+
+## problema 6
+corregido duplicacion de codigo en respuertaCorrecta
+
