@@ -66,4 +66,40 @@ public void partida_con_un_jugador_no_puede_tirar_dado() throws Exception{
         Assertions.assertEquals(true, actual);
 
     }
+    @Test
+    public void crear_partida_con_tres_jugadores_es_jugable() {
+        Game sut = new Game("Maria", "Juan", "Sergio");
+
+        boolean actual = sut.esJugable();
+
+        Assertions.assertEquals(true, actual);
+
+    }
+    @Test
+    public void crear_partida_con_cuatro_jugadores_es_jugable() {
+        Game sut = new Game("Maria", "Juan", "Sergio", "Carlos");
+
+        boolean actual = sut.esJugable();
+
+        Assertions.assertEquals(true, actual);
+
+    }
+    @Test
+    public void crear_partida_con_cinco_jugadores_es_jugable() {
+        Game sut = new Game("Maria", "Juan", "Sergio", "Carlos", "Castilla");
+
+        boolean actual = sut.esJugable();
+
+        Assertions.assertEquals(true, actual);
+
+    }
+    @Test
+    public void crear_partida_con_6_jugadores_es_jugable() {
+        Game sut = new Game("Maria", "Juan", "Sergio", "Carlos", "Castilla", "Alberto");
+
+        boolean actual = sut.esJugable();
+
+        Assertions.assertEquals(true, actual);
+
+    }
 }

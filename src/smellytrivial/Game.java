@@ -21,6 +21,26 @@ public class Game {
         crearPreguntas();
     }
 
+    public Game(String nombreJugador1, String nombreJugador2, String nombreJugador3) {
+        this(nombreJugador1, nombreJugador2);
+        agregar(nombreJugador3);
+    }
+
+    public Game(String nombreJugador1, String nombreJugador2, String nombreJugador3, String nombreJugador4) {
+        this(nombreJugador1, nombreJugador2, nombreJugador3);
+        agregar(nombreJugador4);
+    }
+
+    public Game(String nombreJugador1, String nombreJugador2, String nombreJugador3, String nombreJugador4, String nombreJugador5) {
+        this(nombreJugador1,nombreJugador2,nombreJugador3,nombreJugador4);
+        agregar(nombreJugador5);
+    }
+
+    public Game(String nombreJugador1, String nombreJugador2, String nombreJugador3, String nombreJugador4, String nombreJugador5, String nombreJugador6) {
+        this(nombreJugador1,nombreJugador2,nombreJugador3,nombreJugador4,nombreJugador5);
+        agregar(nombreJugador6);
+    }
+
     private void crearPreguntas() {
         for (int i = 0; i < 50; i++) {
             preguntasCultura.addLast("Pregunta de Cultura " + i);
