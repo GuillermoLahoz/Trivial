@@ -18,12 +18,22 @@ public class Game {
     boolean estaSaliendoDeLaCarcel;
 
     public  Game(){
+        crearPreguntas();
+    }
+
+    private void crearPreguntas() {
         for (int i = 0; i < 50; i++) {
             preguntasCultura.addLast("Pregunta de Cultura " + i);
             preguntasCiencias.addLast(("Pregunta de Ciencias " + i));
             preguntasDeportes.addLast(("Pregunta de Deportes " + i));
             preguntasMusica.addLast(crearPreguntaMusica(i));
         }
+    }
+
+    public Game(String nombreJugador1, String nombreJugador2) {
+        agregar(nombreJugador1);
+        agregar(nombreJugador2);
+        crearPreguntas();
     }
 
     public String crearPreguntaMusica(int index){
@@ -51,7 +61,10 @@ public class Game {
         return jugadores.size();
     }
 
-    public void tirarDado(int puntosDado) {
+    public void tirarDado(int puntosDado) throws  Exception{
+        if (!esJugable()){
+            throw new Exception("Debe haber al menos 2 jugadores");
+        }
         System.out.println(jugadores.get(jugadorActual) + " es el jugador actual");
         System.out.println("Ha sacado un " + puntosDado);
 
