@@ -15,3 +15,6 @@ corregimos el error al salir de la carcel
 ## problema 4
 
 invertidos las funciones para solucionar el error de que el ganador era realmente el que perdia
+
+## problema 5
+corregido duplicacion de codigo
